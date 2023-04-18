@@ -1,15 +1,22 @@
 import React from "react";
+import Meaning from "./Meaning";
 import "./Results.css";
 
 export default function Results(props) {
 	console.log(props.results.phonetic);
 	return (
 		<div className="Results">
+			<p className="You-searched">
+				You searched for the word <span className="Word">{props.results.word}</span>
+			</p>
 			<p className="Phonetic">/{props.results.phonetic}/</p>
-			<p className="What">{props.results.meanings[0].partOfSpeech}</p>
-			<p className="Meaning">{props.results.meanings[0].definition}</p>
-			<p className="What">Synonyms</p>
-			<p className="Example">{props.results.meanings[0].synonyms[0]}</p>
+			{props.results.meanings.map(function (meaning, index) {
+				return (
+					<div key={index}>
+						<Meaning meaning={meaning} />
+					</div>
+				);
+			})}
 		</div>
 	);
 }

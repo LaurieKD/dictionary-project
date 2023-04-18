@@ -45,9 +45,6 @@ export default function Dictionary() {
 			<div className="Dictionary">
 				{form}
 
-				<p className="You-searched">
-					You searched for the word <span className="Word">{word}</span>
-				</p>
 				<Results results={results} />
 			</div>
 		);
