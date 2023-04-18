@@ -1,1 +1,13 @@
+.container {
+	font-family: "Poppins", sans-serif;
+}
 
+.App-header {
+	margin: 30px;
+}
+
+.Header-image {
+	display: block;
+	margin: 0 auto;
+	max-width: 100px;
+}
