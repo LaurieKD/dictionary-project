@@ -1,0 +1,9 @@
+.What {
+	text-transform: capitalize;
+	font-weight: bold;
+}
+
+.Results {
+	text-align: left;
+	margin-left: 20px;
+}
