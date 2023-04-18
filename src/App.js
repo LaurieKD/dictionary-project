@@ -20,7 +20,9 @@ function App() {
 					<Dictionary />
 				</main>
 			</div>
-			<footer>Coded by Laurie Kranendonk</footer>
+			<footer>
+				Coded by Laurie Kranendonk - <a href="https://github.com/LaurieKD/dictionary-project"> open-source code</a>
+			</footer>
 		</div>
 	);
 }

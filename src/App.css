@@ -1,3 +1,11 @@
+a {
+	color: orange;
+}
+
+a:hover {
+	color: red;
+}
+
 h1 {
 	text-align: center;
 }
