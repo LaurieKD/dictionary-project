@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Results from "./Results";
 import "./Dictionary.css";
 
 export default function Dictionary() {
 	let [word, setWord] = useState(null);
 	let [searchWord, setSearchWord] = useState(false);
+	let [results, setResults] = useState(null);
 	let [phonetic, setPhonetic] = useState(null);
+	let [meaning, setMeaning] = useState(null);
 
 	function handleWordChange(event) {
 		event.preventDefault();
@@ -29,37 +32,44 @@ export default function Dictionary() {
 
 	function showResults(response) {
 		setPhonetic(response.data.phonetic);
+		setMeaning(response.data.meanings[0].definition);
+		setResults(response.data);
+		console.log(response.data);
 		console.log(response.data.phonetic);
+		console.log(response.data.meanings[0].definition);
 	}
+
+	let form = (
+		<div className="Dictionary">
+			<form
+				className="Search"
+				onSubmit={search}
+			>
+				<input
+					type="search"
+					placeholder="Search for a word"
+					className="Search-input"
+					onChange={handleWordChange}
+					onClick={handleReset}
+				/>
+			</form>
+		</div>
+	);
 
 	if (searchWord) {
 		return (
 			<div className="Dictionary">
-				<form onSubmit={search}>
-					<input
-						type="search"
-						placeholder="Search for a word"
-						onChange={handleWordChange}
-						onClick={handleReset}
-					/>
-				</form>
-				<p>You searched for the word {word}</p>
+				{form}
+
+				<p>
+					You searched for the word <span className="Word">{word}</span>
+				</p>
+				<p>{meaning}</p>
 				<p>{phonetic}</p>
+				<Results results={results} />
 			</div>
 		);
 	} else {
-		return (
-			<div className="Dictionary">
-				<h2>Type a word:</h2>
-				<form onSubmit={search}>
-					<input
-						type="search"
-						placeholder="Search for a word"
-						autoFocus={true}
-						onChange={handleWordChange}
-					/>
-				</form>
-			</div>
-		);
+		return <div className="Dictionary">{form}</div>;
 	}
 }

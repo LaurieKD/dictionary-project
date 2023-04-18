@@ -6,17 +6,20 @@ import "./App.css";
 
 function App() {
 	return (
-		<div className="container App">
-			<header className="App-header">
-				<img
-					src={dictionaryLogo}
-					alt="Dictionary logo"
-					className="Header-image img-fluid"
-				/>
-			</header>
-			<main>
-				<Dictionary />
-			</main>
+		<div className="App">
+			<div className="container">
+				<header className="App-header">
+					<img
+						src={dictionaryLogo}
+						alt="Dictionary logo"
+						className="Header-image img-fluid"
+					/>
+				</header>
+				<main>
+					<h1>Dictionary</h1>
+					<Dictionary />
+				</main>
+			</div>
 			<footer>Coded by Laurie Kranendonk</footer>
 		</div>
 	);
