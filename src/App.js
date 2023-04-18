@@ -10,7 +10,7 @@ function App() {
 			<header className="App-header">
 				<img
 					src={dictionaryLogo}
-					alt="Image of a dictionary"
+					alt="Dictionary logo"
 					className="Header-image img-fluid"
 				/>
 			</header>

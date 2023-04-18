@@ -1,3 +1,8 @@
+footer {
+	text-align: center;
+	font-size: small;
+}
+
 .container {
 	font-family: "Poppins", sans-serif;
 }
