@@ -12,12 +12,21 @@ export default function Dictionary() {
 		console.log(response.data);
 	}
 
+	function showPhotos(response) {
+		console.log(response);
+	}
+
 	function search(event) {
 		event.preventDefault();
 
 		let apiKey = "2335b3c82b10f0343t05f9bo28bfaca3";
 		let apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${word}&key=${apiKey}`;
 		axios.get(apiUrl).then(showResults);
+
+		let pexelsApiKey = "kJ8DBHEjyQ5CwJNgc4CdSB5HY1Gj47oS2lwoAb3iaqn6KFWeE37yavPT";
+		let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${word}&per_page=9`;
+		let headers = { Authorization: `Bearer ${pexelsApiKey}` };
+		axios.get(pexelsApiUrl, { headers: headers }).then(showPhotos);
 	}
 
 	function handleWordChange(event) {

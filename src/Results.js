@@ -9,7 +9,7 @@ export default function Results(props) {
 			<p className="You-searched">
 				You searched for the word <span className="Word">{props.results.word}</span>
 			</p>
-			<p className="Phonetic">/{props.results.phonetic}/</p>
+			<p className="Phonetic">/'{props.results.phonetic}/</p>
 			{props.results.meanings.map(function (meaning, index) {
 				return (
 					<div key={index}>

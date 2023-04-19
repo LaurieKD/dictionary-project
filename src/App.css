@@ -15,12 +15,17 @@ footer {
 	font-size: small;
 }
 
-.container {
+.App {
 	font-family: "Poppins", sans-serif;
-	border: 1px solid black;
-	border-radius: 10px;
+}
+
+.Page {
+	background-color: white;
 	max-width: 600px;
 	margin: 40px auto;
+	border: 1px solid black;
+	border-radius: 10px;
+	box-shadow: 0px 0px 15px black;
 }
 
 .App-header {

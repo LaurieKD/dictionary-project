@@ -7,18 +7,20 @@ import "./App.css";
 function App() {
 	return (
 		<div className="App">
-			<div className="container">
-				<header className="App-header">
-					<img
-						src={dictionaryLogo}
-						alt="Dictionary logo"
-						className="Header-image img-fluid"
-					/>
-				</header>
-				<main>
-					<h1>Dictionary</h1>
-					<Dictionary />
-				</main>
+			<div className="Page">
+				<div className="container">
+					<header className="App-header">
+						<img
+							src={dictionaryLogo}
+							alt="Dictionary logo"
+							className="Header-image img-fluid"
+						/>
+					</header>
+					<main>
+						<h1>Dictionary</h1>
+						<Dictionary />
+					</main>
+				</div>
 			</div>
 			<footer>
 				Coded by Laurie Kranendonk - <a href="https://github.com/LaurieKD/dictionary-project"> open-source code</a>
