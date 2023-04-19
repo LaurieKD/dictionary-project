@@ -1,0 +1,9 @@
+.Photos img {
+	border-radius: 8px;
+	margin-top: 15px;
+	box-shadow: 3px 3px 5px black;
+}
+
+.Photos {
+	margin: 15px 20px;
+}
