@@ -8,5 +8,13 @@
 }
 
 .Example {
-	font-size: 14px;
+	opacity: 0.8;
+}
+
+.Meaning {
+	border: 1px solid black;
+	border-radius: 8px;
+	margin: 10px 0px;
+	padding: 10px;
+	background-color: rgb(255, 165, 0, 0.2);
 }

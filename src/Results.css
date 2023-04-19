@@ -1,8 +1,12 @@
 .Results {
 	text-align: left;
-	margin-left: 20px;
+	margin: 0px 20px;
 }
 
 .Phonetic {
 	color: grey;
+}
+
+.Word {
+	font-size: 26px;
 }

@@ -6,9 +6,7 @@ export default function Results(props) {
 	console.log(props.results.phonetic);
 	return (
 		<div className="Results">
-			<p className="You-searched">
-				You searched for the word <span className="Word">{props.results.word}</span>
-			</p>
+			<span className="Word">{props.results.word}</span>
 			<p className="Phonetic">/'{props.results.phonetic}/</p>
 			{props.results.meanings.map(function (meaning, index) {
 				return (
